@@ -1,0 +1,24 @@
+CREATE TABLE store (id integer, clothingtype text, size text, price integer, measurement integer, material text);
+
+INSERT INTO store 
+
+VALUES
+(1, "orange tank top", "small", 7, 28, "cotton"),
+(2, "white short sleeve shirt", "medium", 10, 32, "polyester"),
+(3, "pink long sleeve shirt", "large", 15, 35, "cotton blend"),
+(4, "black skating shoes", "nine", 35, 10, "canvas"),
+(5, "black maxi skirt", "extra small", 15, 24, "polyester"),
+(6, "blue jeans", "large", 25, 35, "denim"),
+(7, "black and yellow tshirt", "small", 10, 28, "cotton blend"),
+(8, " floral leggings", "extra large", 8, 38, "spandex"),
+(9, "gray jacket", "medium", 20, 32, "flannel"),
+(10, "green polo shirt", "large", 15, 35, "polyester"),
+(11, "gray jean shorts", "extra small", 17, 24, "denim"),
+(12, "blue jean jacket", "large", 30, 35, "denim"),
+(13, "white long sleeve button up tshirt", "small", 10, 28, "fleece"),
+(14, "pink skort", "medium", 12, 32, "spandex"),
+(15, "purple sweater", "large", 20, 35, "fleece");
+
+SELECT * FROM store
+ORDER BY price desc;
+SELECT SUM("price") FROM store;
