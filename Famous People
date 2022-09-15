@@ -1,0 +1,30 @@
+CREATE TABLE singers (id INTEGER PRIMARY KEY, artist_name TEXT, real_name TEXT, genre TEXT, DOB INTEGER, birthplace TEXT);
+
+INSERT INTO singers VALUES (1, "Post Malone", "Austin Post", "Rap", '07/04/1995', "Syracuse, New York");
+INSERT INTO singers VALUES (2, "Lil Uzi Vert", "Symere Woods", "Rap", '07/31/1995', "Philadelphia, Pennsylvania");
+INSERT INTO singers VALUES (3, "Juice Wrld", "Jarad Higgins", "Rap", '12/02/1998', "Chicago, Illinois");
+
+CREATE TABLE songs (id INTEGER PRIMARY KEY,artist_name TEXT, song TEXT, billboard_hot100 INTEGER);
+
+INSERT INTO songs VALUES (1, "Post Malone", "Rockstar", 1);
+INSERT INTO songs VALUES (2, "Post Malone", "Sunflower", 1);
+INSERT INTO songs VALUES (3, "Post Malone", "Circles", 1);
+INSERT INTO songs VALUES (4, "Lil Uzi Vert", "XO Tour Llif3", 7);
+INSERT INTO songs VALUES (5, "Lil Uzi Vert", "Money Longer", 52);
+INSERT INTO songs VALUES (6, "Lil Uzi Vert", "The Way Life Goes", 24);
+INSERT INTO songs VALUES (7, "Juice Wrld", "Wasted", 27);
+INSERT INTO songs VALUES (8, "Juice Wrld", "Lucid Dreams", 2);
+INSERT INTO songs VALUES (9, "Juice Wrld", "All Girls Are The Same", 41);
+
+CREATE TABLE net_worth (id INTEGER PRIMARY KEY, artist_name TEXT, networth_bymillion INTEGER);
+
+INSERT INTO net_worth VALUES (1, "Post Malone", 45);
+INSERT INTO net_worth VALUES (2, "Lil Uzi Vert", 25);
+INSERT INTO net_worth VALUES (3, "Juice Wrld", 4);
+
+SELECT * 
+    FROM singers
+    JOIN songs
+    ON singers.id=songs.id
+    JOIN net_worth
+    ON net_worth.id=singers.id; 
